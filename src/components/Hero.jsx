@@ -17,10 +17,9 @@ const Hero = () => {
         display: 'flex',
         alignItems: 'center',
         position: 'relative',
-        backgroundImage: `linear-gradient(rgba(26, 35, 126, 0.75), rgba(0, 0, 0, 0.6)), url(${heroBg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
+        backgroundImage: `linear-gradient(135deg, #1a237e 0%, #0d1242 50%, #000000 100%)`,
+        backgroundSize: '400% 400%',
+        animation: 'gradientBG 15s ease infinite',
         color: 'var(--color-white)',
         paddingTop: '80px', // For navbar overlap if any
       }}
@@ -37,7 +36,7 @@ const Hero = () => {
               lineHeight: 1.1
             }}
           >
-            Building Bihar’s Future Since 1982.
+            Building X Future Since Y.
           </h1>
           
           <p 

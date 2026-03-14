@@ -28,7 +28,7 @@ const Footer = () => {
             <div className={`animate-on-scroll ${isVisible ? 'is-visible' : ''}`}>
               <h2 style={{ fontSize: '2rem', marginBottom: '2rem' }}>Get in Touch</h2>
               <p style={{ opacity: 0.9, marginBottom: '2rem', maxWidth: '400px' }}>
-                Partner with Karnawati Builders for your next landmark project. Reach out to our team to discuss your infrastructure needs.
+                Partner with Company X for your next landmark project. Reach out to our team to discuss your infrastructure needs.
               </p>
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
@@ -36,21 +36,21 @@ const Footer = () => {
                   <MapPin style={{ color: 'var(--color-accent)', marginTop: '0.25rem' }} />
                   <div>
                     <h4 style={{ color: 'var(--color-white)', marginBottom: '0.25rem' }}>Head Office</h4>
-                    <p style={{ opacity: 0.8, margin: 0 }}>Tajpur Road,<br />Samastipur - 848101,<br />Bihar, India</p>
+                    <p style={{ opacity: 0.8, margin: 0 }}>Street X,<br />City Y - 000000,<br />Region Z, Country</p>
                   </div>
                 </div>
                 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                   <Phone style={{ color: 'var(--color-accent)' }} />
                   <div>
-                    <p style={{ opacity: 0.8, margin: 0 }}>+91 98765 43210</p>
+                    <p style={{ opacity: 0.8, margin: 0 }}>+00 00000 00000</p>
                   </div>
                 </div>
                 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                   <Mail style={{ color: 'var(--color-accent)' }} />
                   <div>
-                    <p style={{ opacity: 0.8, margin: 0 }}>info@karnawatibuilders.com</p>
+                    <p style={{ opacity: 0.8, margin: 0 }}>info@company-x.com</p>
                   </div>
                 </div>
               </div>
@@ -137,14 +137,14 @@ const Footer = () => {
             opacity: 0.6,
             fontSize: '0.875rem'
           }}>
-            &copy; {new Date().getFullYear()} Karnawati Builders Private Limited. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Company X Private Limited. All Rights Reserved.
           </div>
         </div>
       </footer>
 
       {/* Floating WhatsApp Button */}
       <a 
-        href="https://wa.me/919876543210" 
+        href="https://wa.me/0000000000" 
         target="_blank" 
         rel="noopener noreferrer"
         style={{

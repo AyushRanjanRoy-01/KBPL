@@ -68,7 +68,7 @@ const MissionVision = () => {
             <Eye size={40} style={{ color: 'var(--color-accent)', marginBottom: '1.5rem' }} />
             <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Our Vision</h2>
             <p style={{ fontSize: '1.1rem', opacity: 0.9, lineHeight: 1.8, marginBottom: 0 }}>
-              To be the most trusted and preeminent construction partner in Bihar, recognized for our legacy of reliability, innovative solutions, and unwavering dedication to building a stronger, more connected future for the state.
+              To be the most trusted and preeminent construction partner in Region X, recognized for our legacy of reliability, innovative solutions, and unwavering dedication to building a stronger, more connected future for the region.
             </p>
           </div>
         </div>

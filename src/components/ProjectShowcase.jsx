@@ -1,48 +1,64 @@
 import React, { useState } from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
+const ProjectPlaceholder = ({ index, color }) => (
+  <div style={{
+    width: '100%',
+    height: '100%',
+    background: `linear-gradient(135deg, ${color}, #1a237e)`,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: 'rgba(255,255,255,0.2)',
+    fontSize: '4rem',
+    fontWeight: '800'
+  }}>
+    {index}
+  </div>
+);
+
 const allProjects = [
   {
     id: 1,
-    title: 'Ganga Bridge Extension',
-    category: 'Government Infrastructure',
-    image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80&w=800&h=600',
-    description: 'A 2.5km extension facilitating major transport routes.'
+    title: 'Project X-101',
+    category: 'Category A',
+    color: '#1e3a8a',
+    description: 'Dummy description for project X-101. Placeholder text for construction and infrastructure.'
   },
   {
     id: 2,
-    title: 'Samastipur Medical College',
-    category: 'Government Infrastructure',
-    image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=800&h=600',
-    description: 'State-of-the-art healthcare facility spanning 50 acres.'
+    title: 'Project Y-202',
+    category: 'Category B',
+    color: '#1e40af',
+    description: 'Dummy description for project Y-202. Placeholder text for construction and infrastructure.'
   },
   {
     id: 3,
-    title: 'National Highway 122',
-    category: 'Government Infrastructure',
-    image: 'https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&q=80&w=800&h=600',
-    description: 'Four-lane expansion project completed 3 months ahead of schedule.'
+    title: 'Project Z-303',
+    category: 'Category A',
+    color: '#1d4ed8',
+    description: 'Dummy description for project Z-303. Placeholder text for construction and infrastructure.'
   },
   {
     id: 4,
-    title: 'Royal Enclave',
-    category: 'Residential',
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800&h=600',
-    description: 'Premium residential complex with modern amenities.'
+    title: 'Project X-404',
+    category: 'Category C',
+    color: '#2563eb',
+    description: 'Dummy description for project X-404. Placeholder text for construction and infrastructure.'
   },
   {
     id: 5,
-    title: 'KBPL IT Park',
-    category: 'Commercial',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800&h=600',
-    description: 'Tech hub designed for sustainability and efficiency.'
+    title: 'Project Y-505',
+    category: 'Category B',
+    color: '#3b82f6',
+    description: 'Dummy description for project Y-505. Placeholder text for construction and infrastructure.'
   },
   {
     id: 6,
-    title: 'District Judiciary Building',
-    category: 'Government Infrastructure',
-    image: 'https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&q=80&w=800&h=600',
-    description: 'Modern administrative complex with heritage design elements.'
+    title: 'Project Z-606',
+    category: 'Category A',
+    color: '#60a5fa',
+    description: 'Dummy description for project Z-606. Placeholder text for construction and infrastructure.'
   }
 ];
 
@@ -50,7 +66,7 @@ const ProjectShowcase = () => {
   const [ref, isVisible] = useScrollReveal();
   const [activeTab, setActiveTab] = useState('All');
 
-  const categories = ['All', 'Government Infrastructure', 'Commercial', 'Residential'];
+  const categories = ['All', 'Category A', 'Category B', 'Category C'];
 
   const filteredProjects = activeTab === 'All' 
     ? allProjects 
@@ -141,18 +157,7 @@ const ProjectShowcase = () => {
               }}
             >
               <div style={{ position: 'relative', height: '250px', overflow: 'hidden' }}>
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    transition: 'transform var(--transition-slow)'
-                  }}
-                  onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
-                  onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-                />
+                <ProjectPlaceholder index={project.id} color={project.color} />
                 <div style={{
                   position: 'absolute',
                   top: '1rem',

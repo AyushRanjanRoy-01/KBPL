@@ -3,10 +3,10 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 import { Building2, Calendar, CheckCircle, MapPin } from 'lucide-react';
 
 const stats = [
-  { id: 1, icon: <Calendar size={32} />, value: '1982', label: 'Started', delay: '' },
-  { id: 2, icon: <Building2 size={32} />, value: '2007', label: 'Registered', delay: 'delay-100' },
-  { id: 3, icon: <CheckCircle size={32} />, value: '600+', label: 'Projects Completed', delay: 'delay-200' },
-  { id: 4, icon: <MapPin size={32} />, value: 'Samastipur', label: 'Home Base', delay: 'delay-300' },
+  { id: 1, icon: <Calendar size={32} />, value: 'Year X', label: 'Started', delay: '' },
+  { id: 2, icon: <Building2 size={32} />, value: 'Year Y', label: 'Registered', delay: 'delay-100' },
+  { id: 3, icon: <CheckCircle size={32} />, value: 'Z+', label: 'Projects Completed', delay: 'delay-200' },
+  { id: 4, icon: <MapPin size={32} />, value: 'Location 1', label: 'Home Base', delay: 'delay-300' },
 ];
 
 const LegacyCounter = () => {
