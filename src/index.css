@@ -57,11 +57,12 @@ body {
   font-family: var(--font-body);
   color: var(--color-ink);
   background-color: var(--color-canvas);
-  line-height: 1.75;
+  line-height: 1.6;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-top: 80px; /* Account for fixed navbar */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -263,21 +264,10 @@ img {
     padding: 0 1.5rem;
   }
 
-  /* Navbar Mobile: Stacked Layout */
-  nav {
-    padding: 1rem 0 !important;
-  }
-
-  nav .container {
-    padding: 0 1.5rem;
-  }
-
+  /* Navbar Mobile: Apple-style compact */
   nav .container > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 1.5rem;
+    flex-direction: column !important;
+    gap: 1rem !important;
   }
 
   nav .container > div > div:first-child {
@@ -286,17 +276,14 @@ img {
   }
 
   nav .container > div > div:last-child {
-    display: flex;
+    justify-content: center !important;
+    gap: 1.5rem !important;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    width: 100%;
   }
 
   nav .container > div > div:last-child a {
-    padding: 0.5rem 1rem;
-    font-size: 0.7rem !important;
-    white-space: nowrap;
+    font-size: 0.875rem !important;
+    padding: 0.5rem 1rem !important;
   }
 
   /* Hero Mobile */

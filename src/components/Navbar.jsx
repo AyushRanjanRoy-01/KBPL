@@ -5,7 +5,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 20);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -15,10 +15,17 @@ const Navbar = () => {
   return (
     <nav 
       style={{
-        position: 'relative',
-        backgroundColor: 'var(--color-canvas)',
-        borderBottom: '1px solid var(--color-border)',
-        padding: '1.5rem 0'
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 1000,
+        backgroundColor: scrolled ? 'rgba(248, 246, 242, 0.8)' : 'rgba(248, 246, 242, 0.95)',
+        backdropFilter: 'blur(20px)',
+        WebkitBackdropFilter: 'blur(20px)',
+        borderBottom: scrolled ? '1px solid rgba(0, 0, 0, 0.1)' : '1px solid transparent',
+        padding: scrolled ? '0.75rem 0' : '1rem 0',
+        transition: 'all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
       }}
     >
       <div className="container" style={{
@@ -32,11 +39,12 @@ const Navbar = () => {
           alignItems: 'center'
         }}>
           <span style={{
-            fontFamily: 'var(--font-heading)',
-            fontSize: '1.75rem',
-            fontWeight: '400',
-            letterSpacing: '0.15em',
-            color: 'var(--color-ink)'
+            fontFamily: 'var(--font-body)',
+            fontSize: scrolled ? '1.25rem' : '1.5rem',
+            fontWeight: '600',
+            letterSpacing: '-0.02em',
+            color: 'var(--color-ink)',
+            transition: 'all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
           }}>
             KBPL
           </span>
@@ -45,137 +53,91 @@ const Navbar = () => {
         {/* Navigation Links */}
         <div style={{
           display: 'flex',
-          gap: '2.5rem',
-          alignItems: 'center'
+          gap: scrolled ? '1.5rem' : '2rem',
+          alignItems: 'center',
+          transition: 'all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
         }}>
           <a 
             href="#about"
             style={{
               fontFamily: 'var(--font-body)',
-              fontSize: '0.75rem',
-              fontWeight: '300',
-              textTransform: 'uppercase',
-              letterSpacing: '0.1em',
+              fontSize: scrolled ? '0.875rem' : '0.9rem',
+              fontWeight: '400',
               color: 'var(--color-ink)',
               textDecoration: 'none',
-              transition: 'all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-              position: 'relative',
-              paddingBottom: '2px'
+              transition: 'all 0.2s ease',
+              opacity: 0.8
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.color = 'var(--color-accent)';
-              e.currentTarget.style.transform = 'translateY(-1px)';
+              e.currentTarget.style.opacity = '1';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.color = 'var(--color-ink)';
-              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.opacity = '0.8';
             }}
           >
             About
-            <span style={{
-              position: 'absolute',
-              bottom: '0',
-              left: '0',
-              width: '0',
-              height: '1px',
-              backgroundColor: 'var(--color-accent)',
-              transition: 'width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
-            }} />
           </a>
           <a 
             href="#projects"
             style={{
               fontFamily: 'var(--font-body)',
-              fontSize: '0.75rem',
-              fontWeight: '300',
-              textTransform: 'uppercase',
-              letterSpacing: '0.1em',
+              fontSize: scrolled ? '0.875rem' : '0.9rem',
+              fontWeight: '400',
               color: 'var(--color-ink)',
               textDecoration: 'none',
-              transition: 'all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-              position: 'relative',
-              paddingBottom: '2px'
+              transition: 'all 0.2s ease',
+              opacity: 0.8
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.color = 'var(--color-accent)';
-              e.currentTarget.style.transform = 'translateY(-1px)';
+              e.currentTarget.style.opacity = '1';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.color = 'var(--color-ink)';
-              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.opacity = '0.8';
             }}
           >
             Projects
-            <span style={{
-              position: 'absolute',
-              bottom: '0',
-              left: '0',
-              width: '0',
-              height: '1px',
-              backgroundColor: 'var(--color-accent)',
-              transition: 'width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
-            }} />
           </a>
           <a
             href="#leadership"
             style={{
               fontFamily: 'var(--font-body)',
-              fontSize: '0.75rem',
-              fontWeight: '300',
-              textTransform: 'uppercase',
-              letterSpacing: '0.1em',
+              fontSize: scrolled ? '0.875rem' : '0.9rem',
+              fontWeight: '400',
               color: 'var(--color-ink)',
               textDecoration: 'none',
-              transition: 'all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-              position: 'relative',
-              paddingBottom: '2px'
+              transition: 'all 0.2s ease',
+              opacity: 0.8
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.color = 'var(--color-accent)';
-              e.currentTarget.style.transform = 'translateY(-1px)';
+              e.currentTarget.style.opacity = '1';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.color = 'var(--color-ink)';
-              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.opacity = '0.8';
             }}
           >
             Leadership
-            <span style={{
-              position: 'absolute',
-              bottom: '0',
-              left: '0',
-              width: '0',
-              height: '1px',
-              backgroundColor: 'var(--color-accent)',
-              transition: 'width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
-            }} />
           </a>
           <a 
             href="#contact"
             style={{
               fontFamily: 'var(--font-body)',
-              fontSize: '0.75rem',
+              fontSize: scrolled ? '0.875rem' : '0.9rem',
               fontWeight: '500',
-              textTransform: 'uppercase',
-              letterSpacing: '0.08em',
               color: 'var(--color-white)',
-              backgroundColor: 'var(--color-accent)',
-              padding: '0.75rem 1.75rem',
+              backgroundColor: 'var(--color-ink)',
+              padding: scrolled ? '0.5rem 1.25rem' : '0.625rem 1.5rem',
               textDecoration: 'none',
               transition: 'all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-              borderRadius: '0',
-              transform: 'translateY(0)',
-              boxShadow: '0 2px 4px rgba(181, 145, 90, 0.2)'
+              borderRadius: '20px',
+              opacity: 0.9
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = 'var(--color-accent-dark)';
-              e.currentTarget.style.transform = 'translateY(-2px)';
-              e.currentTarget.style.boxShadow = '0 4px 8px rgba(181, 145, 90, 0.3)';
+              e.currentTarget.style.opacity = '1';
+              e.currentTarget.style.transform = 'scale(1.02)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = 'var(--color-accent)';
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 2px 4px rgba(181, 145, 90, 0.2)';
+              e.currentTarget.style.opacity = '0.9';
+              e.currentTarget.style.transform = 'scale(1)';
             }}
           >
             Contact
