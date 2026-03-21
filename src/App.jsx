@@ -7,7 +7,10 @@ import Leadership from './components/Leadership';
 import ProjectShowcase from './components/ProjectShowcase';
 import MissionVision from './components/MissionVision';
 import Footer from './components/Footer';
+import useSmoothScroll from './hooks/useSmoothScroll';
+
 function App() {
+  useSmoothScroll();
 
   return (
     <>

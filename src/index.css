@@ -52,10 +52,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Smooth scroll behavior for all elements */
-* {
-  scroll-behavior: smooth;
-}
+/* The above rule enables smooth scrolling for the whole page. */
 
 body {
   font-family: var(--font-body);
@@ -106,7 +103,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-accent-hover);
+  color: var(--color-accent-dark);
 }
 
 img {
@@ -288,7 +285,7 @@ img {
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
-    margin-left: 1.5rem; /* Add space between logo and links */
+    padding-left: 1.5rem; /* Add space between logo and links */
     /* Hide scrollbar */
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;  /* IE and Edge */
