@@ -253,11 +253,179 @@ img {
   animation: fadeIn 1.2s ease-out;
 }
 
-/* Utility to add delays for staggered animations */
-.delay-100 { transition-delay: 100ms; }
-.delay-200 { transition-delay: 200ms; }
-.delay-300 { transition-delay: 300ms; }
-.delay-400 { transition-delay: 400ms; }
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  /* Navbar Mobile */
+  nav {
+    padding: 1rem 0;
+    position: relative;
+  }
+
+  nav .container {
+    padding: 0 1.5rem;
+  }
+
+  nav .container > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  /* Logo */
+  nav .container > div > div:first-child {
+    text-align: center;
+  }
+
+  nav .container > div > div:first-child span {
+    font-size: 1.5rem;
+  }
+
+  /* Navigation Links */
+  nav .container > div > div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  nav .container > div > div:last-child a {
+    padding: 0.75rem 1.5rem;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(26, 25, 22, 0.1);
+  }
+
+  nav .container > div > div:last-child a:last-child {
+    border-bottom: none;
+  }
+
+  /* Hero Mobile */
+  .hero .container {
+    padding: 0 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 8vw, 4rem) !important;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 br {
+    display: none;
+  }
+
+  .hero h1 span:last-child {
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem !important;
+    margin-bottom: 2rem;
+  }
+
+  .hero div:last-child {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .hero div:last-child a {
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* About Section Mobile */
+  .about-section h2 {
+    font-size: clamp(1.75rem, 5vw, 2.5rem) !important;
+    margin-bottom: 2rem;
+  }
+
+  /* Legacy Counter Mobile */
+  .legacy-counter .container > div {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    padding: 3rem 0;
+  }
+
+  .legacy-counter .container > div > div {
+    min-height: 120px !important;
+  }
+
+  /* Mission Vision Mobile */
+  .mission-vision .container > div {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+  }
+
+  .mission-vision .container > div > div {
+    padding: 2rem 1.5rem !important;
+  }
+
+  .mission-vision h2 {
+    font-size: 1.75rem !important;
+  }
+
+  /* Leadership Mobile */
+  .leadership .container > div {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+  }
+
+  /* Project Showcase Mobile */
+  .project-showcase .container > div:first-child {
+    margin-bottom: 3rem;
+  }
+
+  .project-showcase .container > div:first-child h2 {
+    font-size: clamp(2rem, 5vw, 3rem) !important;
+  }
+
+  .project-showcase .container > div:nth-child(2) {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .project-showcase .container > div:nth-child(3) {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  /* Footer Mobile */
+  .footer .container > div:first-child {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+  }
+
+  .footer .container > div:first-child > div:first-child h2 {
+    font-size: 2rem;
+  }
+
+  .footer .container > div:first-child > div:last-child {
+    background-color: transparent !important;
+    padding: 0 !important;
+  }
+
+  .footer .container > div:first-child > div:last-child form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer .container > div:first-child > div:last-child form button {
+    width: 100%;
+  }
+
+  /* Button Mobile */
+  .btn {
+    padding: 1rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }

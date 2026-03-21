@@ -58,7 +58,7 @@ const Navbar = () => {
               letterSpacing: '0.1em',
               color: 'var(--color-ink)',
               textDecoration: 'none',
-              transition: 'all 0.4s cubic-bezier(0.22, 1, 0.36, 1)',
+              transition: 'all 0.6s cubic-bezier(0.22, 1, 0.36, 1)',
               position: 'relative',
               paddingBottom: '2px'
             }}
@@ -79,7 +79,7 @@ const Navbar = () => {
               width: '0',
               height: '1px',
               backgroundColor: 'var(--color-accent)',
-              transition: 'width 0.4s cubic-bezier(0.22, 1, 0.36, 1)'
+              transition: 'width 0.6s cubic-bezier(0.22, 1, 0.36, 1)'
             }} />
           </a>
           <a 
@@ -92,7 +92,7 @@ const Navbar = () => {
               letterSpacing: '0.1em',
               color: 'var(--color-ink)',
               textDecoration: 'none',
-              transition: 'all 0.4s cubic-bezier(0.22, 1, 0.36, 1)',
+              transition: 'all 0.6s cubic-bezier(0.22, 1, 0.36, 1)',
               position: 'relative',
               paddingBottom: '2px'
             }}
@@ -113,10 +113,10 @@ const Navbar = () => {
               width: '0',
               height: '1px',
               backgroundColor: 'var(--color-accent)',
-              transition: 'width 0.4s cubic-bezier(0.22, 1, 0.36, 1)'
+              transition: 'width 0.6s cubic-bezier(0.22, 1, 0.36, 1)'
             }} />
           </a>
-          <a 
+          <a
             href="#leadership"
             style={{
               fontFamily: 'var(--font-body)',
@@ -126,7 +126,7 @@ const Navbar = () => {
               letterSpacing: '0.1em',
               color: 'var(--color-ink)',
               textDecoration: 'none',
-              transition: 'all 0.4s cubic-bezier(0.22, 1, 0.36, 1)',
+              transition: 'all 0.6s cubic-bezier(0.22, 1, 0.36, 1)',
               position: 'relative',
               paddingBottom: '2px'
             }}
