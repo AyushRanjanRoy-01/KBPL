@@ -50,31 +50,19 @@ const Hero = () => {
               lineHeight: '1.05',
               marginBottom: '1rem',
               letterSpacing: '0.01em',
-              background: 'linear-gradient(135deg, #1A1916 0%, #4a4540 50%, #1A1916 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              textShadow: '0 4px 12px rgba(26, 25, 22, 0.15)',
+              color: 'var(--color-ink)',
+              textShadow: '0 2px 4px rgba(26, 25, 22, 0.08)',
               position: 'relative',
               display: 'inline-block'
             }}
           >
-            <span style={{ 
-              position: 'relative',
-              display: 'inline-block',
-              filter: 'drop-shadow(0 2px 8px rgba(181, 145, 90, 0.2))'
-            }}>
-              Karnawati Builders
-            </span>
+            Karnawati Builders
             <br />
             <span style={{ 
               fontSize: '0.65em',
               fontWeight: '300',
               letterSpacing: '0.15em',
-              background: 'linear-gradient(135deg, #B5915A 0%, #8C6D3F 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
+              color: 'var(--color-accent)',
               display: 'inline-block',
               marginTop: '0.25rem'
             }}>
