@@ -253,6 +253,14 @@ img {
   animation: fadeIn 1.2s ease-out;
 }
 
+.stat-item {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .container {
@@ -261,7 +269,7 @@ img {
 
   /* Navbar Mobile */
   nav {
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     position: relative;
   }
 
@@ -272,12 +280,12 @@ img {
   nav .container > div {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
   }
 
   /* Logo */
   nav .container > div > div:first-child {
     text-align: center;
+    margin-bottom: 2rem;
   }
 
   nav .container > div > div:first-child span {
@@ -346,9 +354,18 @@ img {
   }
 
   /* Legacy Counter Mobile */
+  .legacy-counter .stat-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .legacy-counter .stat-item:last-child {
+    border-bottom: none;
+  }
+
   .legacy-counter .container > div {
     grid-template-columns: 1fr !important;
-    gap: 2rem !important;
+    gap: 0 !important;
     padding: 3rem 0;
   }
 

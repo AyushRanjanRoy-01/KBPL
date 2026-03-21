@@ -61,7 +61,7 @@ const LegacyCounter = () => {
           {stats.map((stat, index) => (
             <div 
               key={stat.id} 
-              className={`animate-on-scroll ${stat.delay} ${isVisible ? 'is-visible' : ''}`}
+              className={`animate-on-scroll stat-item ${stat.delay} ${isVisible ? 'is-visible' : ''}`}
               style={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -69,7 +69,6 @@ const LegacyCounter = () => {
                 justifyContent: 'center',
                 gap: '0.75rem',
                 padding: '2rem 1.5rem',
-                borderRight: index < stats.length - 1 ? '1px solid rgba(255,255,255,0.1)' : 'none',
                 minHeight: '180px'
               }}
             >
