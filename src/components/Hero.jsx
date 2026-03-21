@@ -23,60 +23,88 @@ const Hero = () => {
       }}
     >
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-        <div style={{ maxWidth: '900px' }}>
-          {/* Company Name */}
-          <div 
-            className={`animate-on-scroll ${isVisible ? 'is-visible' : ''}`}
-            style={{
-              fontFamily: 'var(--font-heading)',
-              fontSize: 'clamp(1.5rem, 2.5vw, 2rem)',
-              fontWeight: '400',
-              color: 'var(--color-ink)',
-              marginBottom: '1rem',
-              letterSpacing: '0.02em'
-            }}
-          >
-            Karnawati Builders Private Limited
-          </div>
-
+        <div style={{ maxWidth: '1000px' }}>
           {/* Eyebrow Label */}
           <div 
             className={`animate-on-scroll ${isVisible ? 'is-visible' : ''}`}
             style={{
               fontFamily: 'var(--font-body)',
-              fontSize: '0.75rem',
-              fontWeight: '300',
+              fontSize: '0.7rem',
+              fontWeight: '400',
               textTransform: 'uppercase',
-              letterSpacing: '0.15em',
-              color: 'var(--color-ink-muted)',
-              marginBottom: '2rem'
+              letterSpacing: '0.2em',
+              color: 'var(--color-accent)',
+              marginBottom: '1.5rem'
             }}
           >
             — Est. 1982 · Government Infrastructure Excellence
           </div>
 
+          {/* Company Name - Hero */}
           <h1 
             className={`animate-on-scroll ${isVisible ? 'is-visible' : ''}`}
+            style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: 'clamp(3rem, 6vw, 6rem)',
+              fontWeight: '400',
+              lineHeight: '1.05',
+              marginBottom: '1rem',
+              letterSpacing: '0.01em',
+              background: 'linear-gradient(135deg, #1A1916 0%, #4a4540 50%, #1A1916 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              textShadow: '0 4px 12px rgba(26, 25, 22, 0.15)',
+              position: 'relative',
+              display: 'inline-block'
+            }}
+          >
+            <span style={{ 
+              position: 'relative',
+              display: 'inline-block',
+              filter: 'drop-shadow(0 2px 8px rgba(181, 145, 90, 0.2))'
+            }}>
+              Karnawati Builders
+            </span>
+            <br />
+            <span style={{ 
+              fontSize: '0.65em',
+              fontWeight: '300',
+              letterSpacing: '0.15em',
+              background: 'linear-gradient(135deg, #B5915A 0%, #8C6D3F 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              display: 'inline-block',
+              marginTop: '0.25rem'
+            }}>
+              PRIVATE LIMITED
+            </span>
+          </h1>
+
+          {/* Tagline - Smaller */}
+          <p 
+            className={`animate-on-scroll delay-200 ${isVisible ? 'is-visible' : ''}`}
             style={{ 
               fontFamily: 'var(--font-heading)',
-              fontSize: 'clamp(3.5rem, 7vw, 7.5rem)',
+              fontSize: 'clamp(1.25rem, 2.5vw, 2rem)',
               fontWeight: '300',
-              lineHeight: '0.9',
-              marginBottom: '2rem',
-              color: 'var(--color-ink)',
-              letterSpacing: '-0.02em'
+              fontStyle: 'italic',
+              lineHeight: '1.3',
+              marginBottom: '2.5rem',
+              color: 'var(--color-ink-muted)',
+              letterSpacing: '-0.01em',
+              maxWidth: '600px'
             }}
           >
             We Build What{' '}
             <span style={{ 
-              fontStyle: 'italic', 
               color: 'var(--color-accent)',
-              display: 'block',
-              marginTop: '0.5rem'
+              fontWeight: '400'
             }}>
               Endures
             </span>
-          </h1>
+          </p>
           
           <p 
             className={`animate-on-scroll delay-200 ${isVisible ? 'is-visible' : ''}`}

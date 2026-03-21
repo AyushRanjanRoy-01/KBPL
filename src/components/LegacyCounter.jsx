@@ -15,12 +15,43 @@ const LegacyCounter = () => {
   return (
     <section 
       style={{
-        padding: '5rem 0',
+        padding: '6rem 0',
         backgroundColor: 'var(--color-ink)',
         borderTop: '1px solid var(--color-accent)'
       }}
     >
       <div className="container" ref={ref}>
+        {/* Section Header */}
+        <div style={{ marginBottom: '4rem', textAlign: 'center' }}>
+          <div 
+            className={`animate-on-scroll ${isVisible ? 'is-visible' : ''}`}
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: '0.7rem',
+              fontWeight: '300',
+              textTransform: 'uppercase',
+              letterSpacing: '0.15em',
+              color: 'var(--color-accent)',
+              marginBottom: '1.5rem'
+            }}
+          >
+            — Our Legacy
+          </div>
+          <h2 
+            className={`animate-on-scroll ${isVisible ? 'is-visible' : ''}`} 
+            style={{ 
+              fontFamily: 'var(--font-heading)',
+              fontSize: 'clamp(2rem, 4vw, 3rem)',
+              fontWeight: '300',
+              lineHeight: '1.1',
+              color: 'var(--color-white)'
+            }}
+          >
+            Four Decades of{' '}
+            <span style={{ fontStyle: 'italic', color: 'var(--color-accent)' }}>Excellence</span>
+          </h2>
+        </div>
+
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
