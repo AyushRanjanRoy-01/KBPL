@@ -58,7 +58,7 @@ const Navbar = () => {
               letterSpacing: '0.1em',
               color: 'var(--color-ink)',
               textDecoration: 'none',
-              transition: 'all 0.6s cubic-bezier(0.22, 1, 0.36, 1)',
+              transition: 'all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
               position: 'relative',
               paddingBottom: '2px'
             }}
@@ -79,7 +79,7 @@ const Navbar = () => {
               width: '0',
               height: '1px',
               backgroundColor: 'var(--color-accent)',
-              transition: 'width 0.6s cubic-bezier(0.22, 1, 0.36, 1)'
+              transition: 'width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
             }} />
           </a>
           <a 
@@ -92,7 +92,7 @@ const Navbar = () => {
               letterSpacing: '0.1em',
               color: 'var(--color-ink)',
               textDecoration: 'none',
-              transition: 'all 0.6s cubic-bezier(0.22, 1, 0.36, 1)',
+              transition: 'all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
               position: 'relative',
               paddingBottom: '2px'
             }}
@@ -113,7 +113,7 @@ const Navbar = () => {
               width: '0',
               height: '1px',
               backgroundColor: 'var(--color-accent)',
-              transition: 'width 0.6s cubic-bezier(0.22, 1, 0.36, 1)'
+              transition: 'width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
             }} />
           </a>
           <a
@@ -126,7 +126,7 @@ const Navbar = () => {
               letterSpacing: '0.1em',
               color: 'var(--color-ink)',
               textDecoration: 'none',
-              transition: 'all 0.6s cubic-bezier(0.22, 1, 0.36, 1)',
+              transition: 'all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
               position: 'relative',
               paddingBottom: '2px'
             }}
@@ -147,7 +147,7 @@ const Navbar = () => {
               width: '0',
               height: '1px',
               backgroundColor: 'var(--color-accent)',
-              transition: 'width 0.4s cubic-bezier(0.22, 1, 0.36, 1)'
+              transition: 'width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
             }} />
           </a>
           <a 
@@ -162,7 +162,7 @@ const Navbar = () => {
               backgroundColor: 'var(--color-accent)',
               padding: '0.75rem 1.75rem',
               textDecoration: 'none',
-              transition: 'all 0.4s cubic-bezier(0.22, 1, 0.36, 1)',
+              transition: 'all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
               borderRadius: '0',
               transform: 'translateY(0)',
               boxShadow: '0 2px 4px rgba(181, 145, 90, 0.2)'

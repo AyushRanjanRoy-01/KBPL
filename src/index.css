@@ -49,10 +49,9 @@
 
 html {
   font-size: 16px;
-  scroll-behavior: smooth;
 }
 
-/* The above rule enables smooth scrolling for the whole page. */
+/* JavaScript handles smooth scrolling with custom timing */
 
 body {
   font-family: var(--font-body);
@@ -156,7 +155,7 @@ img {
   font-size: 0.8rem;
   border-radius: 0;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   transform: translateY(0);
@@ -224,8 +223,8 @@ img {
 
 .animate-on-scroll {
   opacity: 0;
-  transform: translateY(40px);
-  transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .animate-on-scroll.is-visible {
@@ -234,15 +233,15 @@ img {
 }
 
 .animate-on-scroll.delay-200 {
-  transition-delay: 0.2s;
+  transition-delay: 0.15s;
 }
 
 .animate-on-scroll.delay-400 {
-  transition-delay: 0.4s;
+  transition-delay: 0.3s;
 }
 
 .animate-on-scroll.delay-600 {
-  transition-delay: 0.6s;
+  transition-delay: 0.45s;
 }
 
 /* Smooth page load animation */
@@ -271,9 +270,9 @@ img {
 
   nav .container > div {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
+    gap: 2rem; /* Reliable space between logo and nav */
   }
 
   nav .container > div > div:first-child {
@@ -285,7 +284,8 @@ img {
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
-    padding-left: 1.5rem; /* Add space between logo and links */
+    flex: 1;
+    justify-content: flex-end;
     /* Hide scrollbar */
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;  /* IE and Edge */
