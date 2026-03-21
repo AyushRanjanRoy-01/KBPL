@@ -48,7 +48,7 @@ const Leadership = () => {
   const [ref, isVisible] = useScrollReveal();
 
   return (
-    <section className="section" id="leadership" style={{ backgroundColor: 'var(--color-canvas)', padding: '8rem 0' }}>
+    <section className="section leadership" id="leadership" style={{ backgroundColor: 'var(--color-canvas)', padding: '8rem 0' }}>
       <div className="container" ref={ref}>
         <div style={{ marginBottom: '5rem', maxWidth: '800px' }}>
           <div 

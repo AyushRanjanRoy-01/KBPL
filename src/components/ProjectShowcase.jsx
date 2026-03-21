@@ -74,7 +74,7 @@ const ProjectShowcase = () => {
     : allProjects.filter(p => p.category === activeTab);
 
   return (
-    <section className="section" id="projects">
+    <section className="section project-showcase" id="projects">
       <div className="container" ref={ref}>
         <div style={{ marginBottom: '5rem', maxWidth: '800px' }}>
           <div 

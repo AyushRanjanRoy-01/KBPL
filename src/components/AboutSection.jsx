@@ -6,6 +6,8 @@ const AboutSection = () => {
 
   return (
     <section 
+      id="about"
+      className="about-section"
       style={{
         padding: '8rem 0',
         backgroundColor: '#e8f1f5',

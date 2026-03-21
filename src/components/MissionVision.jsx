@@ -6,7 +6,7 @@ const MissionVision = () => {
   const [ref, isVisible] = useScrollReveal();
 
   return (
-    <section style={{ padding: '8rem 0', backgroundColor: 'var(--color-canvas)' }}>
+    <section id="mission" className="mission-vision" style={{ padding: '8rem 0', backgroundColor: 'var(--color-canvas)' }}>
       <div className="container" ref={ref}>
         {/* Section Header */}
         <div style={{ marginBottom: '5rem', textAlign: 'center', maxWidth: '800px', margin: '0 auto 5rem auto' }}>

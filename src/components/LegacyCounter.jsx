@@ -14,6 +14,8 @@ const LegacyCounter = () => {
 
   return (
     <section 
+      id="legacy"
+      className="legacy-counter"
       style={{
         padding: '6rem 0',
         backgroundColor: 'var(--color-ink)',

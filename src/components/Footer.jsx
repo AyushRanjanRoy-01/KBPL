@@ -15,7 +15,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer id="contact" style={{ padding: '8rem 0 2rem 0', position: 'relative', backgroundColor: 'var(--color-ink)', borderTop: '1px solid var(--color-accent)' }}>
+      <footer id="contact" className="section-bg-dark footer" style={{ padding: '6rem 0 2rem 0', position: 'relative', backgroundColor: 'var(--color-ink)', borderTop: '1px solid var(--color-accent)' }}>
         <div className="container" ref={ref}>
           <div style={{
             display: 'grid',
