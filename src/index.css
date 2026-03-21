@@ -263,45 +263,47 @@ img {
     padding: 0 1.5rem;
   }
 
-  /* Navbar Mobile: Horizontally Scrollable */
+  /* Navbar Mobile: Stacked Layout */
+  nav {
+    padding: 1rem 0 !important;
+  }
+
   nav .container {
     padding: 0 1.5rem;
   }
 
   nav .container > div {
     display: flex;
+    flex-direction: column;
     align-items: center;
     width: 100%;
-    gap: 2rem; /* Reliable space between logo and nav */
+    gap: 1.5rem;
   }
 
   nav .container > div > div:first-child {
-    flex-shrink: 0; /* Prevent logo from shrinking */
+    width: 100%;
+    text-align: center;
   }
 
   nav .container > div > div:last-child {
     display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    flex: 1;
-    justify-content: flex-end;
-    /* Hide scrollbar */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* IE and Edge */
-  }
-
-  nav .container > div > div:last-child::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
   }
 
   nav .container > div > div:last-child a {
     padding: 0.5rem 1rem;
-    display: inline-block;
-    margin-left: 0.5rem;
+    font-size: 0.7rem !important;
+    white-space: nowrap;
   }
 
   /* Hero Mobile */
+  .hero {
+    padding-top: 2rem !important;
+  }
+
   .hero .container {
     padding: 0 1.5rem;
   }
