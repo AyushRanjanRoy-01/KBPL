@@ -24,6 +24,21 @@ const Hero = () => {
     >
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div style={{ maxWidth: '900px' }}>
+          {/* Company Name */}
+          <div 
+            className={`animate-on-scroll ${isVisible ? 'is-visible' : ''}`}
+            style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: 'clamp(1.5rem, 2.5vw, 2rem)',
+              fontWeight: '400',
+              color: 'var(--color-ink)',
+              marginBottom: '1rem',
+              letterSpacing: '0.02em'
+            }}
+          >
+            Karnawati Builders Private Limited
+          </div>
+
           {/* Eyebrow Label */}
           <div 
             className={`animate-on-scroll ${isVisible ? 'is-visible' : ''}`}

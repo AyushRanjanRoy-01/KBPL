@@ -13,6 +13,22 @@ const AboutSection = () => {
     >
       <div className="container" ref={ref}>
         <div style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
+          {/* Section Header */}
+          <div 
+            className={`animate-on-scroll ${isVisible ? 'is-visible' : ''}`}
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: '0.7rem',
+              fontWeight: '300',
+              textTransform: 'uppercase',
+              letterSpacing: '0.15em',
+              color: '#2c5f7c',
+              marginBottom: '1.5rem'
+            }}
+          >
+            — About Us
+          </div>
+
           {/* Main Headline */}
           <h2 
             className={`animate-on-scroll ${isVisible ? 'is-visible' : ''}`}

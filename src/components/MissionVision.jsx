@@ -8,6 +8,37 @@ const MissionVision = () => {
   return (
     <section style={{ padding: '8rem 0', backgroundColor: 'var(--color-canvas)' }}>
       <div className="container" ref={ref}>
+        {/* Section Header */}
+        <div style={{ marginBottom: '5rem', textAlign: 'center', maxWidth: '800px', margin: '0 auto 5rem auto' }}>
+          <div 
+            className={`animate-on-scroll ${isVisible ? 'is-visible' : ''}`}
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: '0.7rem',
+              fontWeight: '300',
+              textTransform: 'uppercase',
+              letterSpacing: '0.15em',
+              color: 'var(--color-accent)',
+              marginBottom: '1.5rem'
+            }}
+          >
+            — Our Purpose
+          </div>
+          <h2 
+            className={`animate-on-scroll ${isVisible ? 'is-visible' : ''}`} 
+            style={{ 
+              fontFamily: 'var(--font-heading)',
+              fontSize: 'clamp(2.5rem, 4vw, 3.75rem)',
+              fontWeight: '300',
+              lineHeight: '1.1',
+              color: 'var(--color-ink)'
+            }}
+          >
+            Guided by Vision.{' '}
+            <span style={{ fontStyle: 'italic', color: 'var(--color-accent)' }}>Driven by Mission.</span>
+          </h2>
+        </div>
+
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
