@@ -15,7 +15,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="section-bg-dark" id="contact" style={{ padding: '6rem 0 2rem 0', position: 'relative' }}>
+      <footer id="contact" style={{ padding: '8rem 0 2rem 0', position: 'relative', backgroundColor: 'var(--color-ink)', borderTop: '1px solid var(--color-accent)' }}>
         <div className="container" ref={ref}>
           <div style={{
             display: 'grid',
@@ -26,31 +26,68 @@ const Footer = () => {
             
             {/* Contact Info */}
             <div className={`animate-on-scroll ${isVisible ? 'is-visible' : ''}`}>
-              <h2 style={{ fontSize: '2rem', marginBottom: '2rem' }}>Get in Touch</h2>
-              <p style={{ opacity: 0.9, marginBottom: '2rem', maxWidth: '400px' }}>
-                Partner with Company X for your next landmark project. Reach out to our team to discuss your infrastructure needs.
+              <h2 style={{ 
+                fontFamily: 'var(--font-heading)',
+                fontSize: '2.5rem', 
+                fontWeight: '300',
+                marginBottom: '2rem', 
+                color: 'var(--color-white)' 
+              }}>Get in Touch</h2>
+              <p style={{ 
+                fontFamily: 'var(--font-body)',
+                fontWeight: '300',
+                color: 'rgba(255,255,255,0.7)', 
+                marginBottom: '2rem', 
+                maxWidth: '400px',
+                lineHeight: '1.75' 
+              }}>
+                Partner with Karnawati Builders for your next landmark project. Reach out to our team to discuss your infrastructure needs.
               </p>
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
                   <MapPin style={{ color: 'var(--color-accent)', marginTop: '0.25rem' }} />
                   <div>
-                    <h4 style={{ color: 'var(--color-white)', marginBottom: '0.25rem' }}>Head Office</h4>
-                    <p style={{ opacity: 0.8, margin: 0 }}>Street X,<br />City Y - 000000,<br />Region Z, Country</p>
+                    <h4 style={{ 
+                      fontFamily: 'var(--font-body)',
+                      fontWeight: '500',
+                      fontSize: '0.875rem',
+                      color: 'var(--color-white)', 
+                      marginBottom: '0.5rem',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.08em'
+                    }}>Head Office</h4>
+                    <p style={{ 
+                      fontFamily: 'var(--font-body)',
+                      fontWeight: '300',
+                      color: 'rgba(255,255,255,0.6)', 
+                      margin: 0,
+                      lineHeight: '1.6' 
+                    }}>Tajpurt Road,<br />Samastipur - 848101,<br />Bihar, India</p>
                   </div>
                 </div>
                 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                   <Phone style={{ color: 'var(--color-accent)' }} />
                   <div>
-                    <p style={{ opacity: 0.8, margin: 0 }}>+00 00000 00000</p>
+                    <p style={{ 
+                      fontFamily: 'var(--font-body)',
+                      fontWeight: '300',
+                      color: 'rgba(255,255,255,0.6)', 
+                      margin: 0 
+                    }}>+00 00000 00000</p>
                   </div>
                 </div>
                 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                   <Mail style={{ color: 'var(--color-accent)' }} />
                   <div>
-                    <p style={{ opacity: 0.8, margin: 0 }}>info@company-x.com</p>
+                    <p style={{ 
+                      fontFamily: 'var(--font-body)',
+                      fontWeight: '300',
+                      color: 'rgba(255,255,255,0.6)', 
+                      margin: 0 
+                    }}>info@karnawatibuilders.com</p>
                   </div>
                 </div>
               </div>
@@ -60,13 +97,20 @@ const Footer = () => {
             <div 
               className={`animate-on-scroll delay-200 ${isVisible ? 'is-visible' : ''}`}
               style={{
-                backgroundColor: 'var(--color-white)',
+                backgroundColor: 'var(--color-surface)',
                 padding: '2.5rem',
-                borderRadius: 'var(--border-radius)',
-                color: 'var(--color-text-main)'
+                borderRadius: '0',
+                border: '1px solid var(--color-border)',
+                color: 'var(--color-ink)'
               }}
             >
-              <h3 style={{ marginBottom: '1.5rem', color: 'var(--color-primary)' }}>Quick Inquiry</h3>
+              <h3 style={{ 
+                fontFamily: 'var(--font-heading)',
+                fontSize: '1.75rem',
+                fontWeight: '400',
+                marginBottom: '1.5rem', 
+                color: 'var(--color-ink)' 
+              }}>Quick Inquiry</h3>
               <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 <div>
                   <label htmlFor="name" style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>Full Name</label>
@@ -78,11 +122,15 @@ const Footer = () => {
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
                     style={{
                       width: '100%',
-                      padding: '0.75rem',
+                      padding: '0.875rem 1rem',
                       border: '1px solid var(--color-border)',
-                      borderRadius: '4px',
-                      fontFamily: 'var(--font-body)'
+                      borderRadius: '2px',
+                      fontFamily: 'var(--font-body)',
+                      fontSize: '0.95rem',
+                      transition: 'border-color 0.2s ease'
                     }}
+                    onFocus={(e) => e.target.style.borderColor = 'var(--color-accent)'}
+                    onBlur={(e) => e.target.style.borderColor = 'var(--color-border)'}
                   />
                 </div>
                 
@@ -96,11 +144,15 @@ const Footer = () => {
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
                     style={{
                       width: '100%',
-                      padding: '0.75rem',
+                      padding: '0.875rem 1rem',
                       border: '1px solid var(--color-border)',
-                      borderRadius: '4px',
-                      fontFamily: 'var(--font-body)'
+                      borderRadius: '2px',
+                      fontFamily: 'var(--font-body)',
+                      fontSize: '0.95rem',
+                      transition: 'border-color 0.2s ease'
                     }}
+                    onFocus={(e) => e.target.style.borderColor = 'var(--color-accent)'}
+                    onBlur={(e) => e.target.style.borderColor = 'var(--color-border)'}
                   />
                 </div>
                 
@@ -114,12 +166,16 @@ const Footer = () => {
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
                     style={{
                       width: '100%',
-                      padding: '0.75rem',
+                      padding: '0.875rem 1rem',
                       border: '1px solid var(--color-border)',
-                      borderRadius: '4px',
+                      borderRadius: '2px',
                       fontFamily: 'var(--font-body)',
-                      resize: 'vertical'
+                      fontSize: '0.95rem',
+                      resize: 'vertical',
+                      transition: 'border-color 0.2s ease'
                     }}
+                    onFocus={(e) => e.target.style.borderColor = 'var(--color-accent)'}
+                    onBlur={(e) => e.target.style.borderColor = 'var(--color-border)'}
                   ></textarea>
                 </div>
                 
@@ -134,10 +190,13 @@ const Footer = () => {
             borderTop: '1px solid rgba(255,255,255,0.1)',
             paddingTop: '2rem',
             textAlign: 'center',
-            opacity: 0.6,
-            fontSize: '0.875rem'
+            color: 'rgba(255,255,255,0.4)',
+            fontFamily: 'var(--font-body)',
+            fontWeight: '300',
+            fontSize: '0.75rem',
+            letterSpacing: '0.05em'
           }}>
-            &copy; {new Date().getFullYear()} Company X Private Limited. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Karnawati Builders Private Limited. All Rights Reserved.
           </div>
         </div>
       </footer>

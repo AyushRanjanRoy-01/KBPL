@@ -17,45 +17,87 @@ const Hero = () => {
         display: 'flex',
         alignItems: 'center',
         position: 'relative',
-        backgroundImage: `linear-gradient(135deg, #1a237e 0%, #0d1242 50%, #000000 100%)`,
-        backgroundSize: '400% 400%',
-        animation: 'gradientBG 15s ease infinite',
-        color: 'var(--color-white)',
-        paddingTop: '80px', // For navbar overlap if any
+        backgroundColor: 'var(--color-canvas)',
+        paddingTop: '80px',
+        paddingBottom: '80px',
       }}
     >
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-        <div style={{ maxWidth: '800px' }}>
+        <div style={{ maxWidth: '900px' }}>
+          {/* Eyebrow Label */}
+          <div 
+            className={`animate-on-scroll ${isVisible ? 'is-visible' : ''}`}
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: '0.75rem',
+              fontWeight: '300',
+              textTransform: 'uppercase',
+              letterSpacing: '0.15em',
+              color: 'var(--color-ink-muted)',
+              marginBottom: '2rem'
+            }}
+          >
+            — Est. 1982 · Government Infrastructure Excellence
+          </div>
+
           <h1 
             className={`animate-on-scroll ${isVisible ? 'is-visible' : ''}`}
             style={{ 
-              fontSize: 'clamp(3rem, 5vw, 4.5rem)', 
-              marginBottom: '1.5rem',
-              color: 'var(--color-white)',
-              textShadow: '0 4px 12px rgba(0,0,0,0.3)',
-              lineHeight: 1.1
+              fontFamily: 'var(--font-heading)',
+              fontSize: 'clamp(3.5rem, 7vw, 7.5rem)',
+              fontWeight: '300',
+              lineHeight: '0.9',
+              marginBottom: '2rem',
+              color: 'var(--color-ink)',
+              letterSpacing: '-0.02em'
             }}
           >
-            Building X Future Since Y.
+            We Build What{' '}
+            <span style={{ 
+              fontStyle: 'italic', 
+              color: 'var(--color-accent)',
+              display: 'block',
+              marginTop: '0.5rem'
+            }}>
+              Endures
+            </span>
           </h1>
           
           <p 
             className={`animate-on-scroll delay-200 ${isVisible ? 'is-visible' : ''}`}
             style={{ 
-              fontSize: '1.25rem', 
-              marginBottom: '2.5rem',
-              opacity: 0.9,
-              maxWidth: '600px',
-              lineHeight: 1.6
+              fontFamily: 'var(--font-body)',
+              fontSize: '1.125rem',
+              fontWeight: '300',
+              marginBottom: '3rem',
+              color: 'var(--color-ink-muted)',
+              maxWidth: '580px',
+              lineHeight: '1.75'
             }}
           >
-            A legacy of 600+ successful government projects delivered with precision, quality, and an unwavering commitment to our community.
+            From foundation to completion — Karnawati Builders delivers precision engineering and architectural excellence across 600+ government infrastructure projects.
           </p>
           
-          <div className={`animate-on-scroll delay-400 ${isVisible ? 'is-visible' : ''}`}>
-            <a href="#projects" className="btn btn-primary" style={{ display: 'inline-flex', gap: '0.5rem' }}>
-              Explore Our Projects
-              <ArrowRight size={20} />
+          <div className={`animate-on-scroll delay-400 ${isVisible ? 'is-visible' : ''}`} style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+            <a href="#projects" className="btn btn-primary" style={{ display: 'inline-flex', gap: '0.5rem', alignItems: 'center' }}>
+              View Our Work
+            </a>
+            <a href="#about" style={{ 
+              fontFamily: 'var(--font-body)',
+              fontSize: '0.875rem',
+              fontWeight: '400',
+              color: 'var(--color-ink)',
+              textDecoration: 'none',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              borderBottom: '1px solid transparent',
+              transition: 'border-color 0.3s ease'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.borderBottomColor = 'var(--color-accent)'}
+            onMouseLeave={(e) => e.currentTarget.style.borderBottomColor = 'transparent'}
+            >
+              Our Story <ArrowRight size={16} />
             </a>
           </div>
         </div>

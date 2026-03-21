@@ -27,19 +27,19 @@ const AvatarIcon = ({ initials, color }) => (
 
 const leaders = [
   {
-    name: 'Mr. X. Sharma',
+    name: 'Mr. Madan Mohan Pandey',
     role: 'Managing Director',
     quote: "Our 40-year legacy is built on a foundation of trust, uncompromising quality, and the relentless drive to build a better Bihar for future generations.",
-    initials: 'XS',
-    color: '#1a237e',
+    initials: 'MP',
+    color: '#4a7a96',
     delay: ''
   },
   {
-    name: 'Mr. Y. Verma',
+    name: 'Mr. Atulya Kumar',
     role: 'Director',
     quote: "We don't just execute government contracts; we deliver critical infrastructure that empowers communities and accelerates regional economic growth.",
-    initials: 'YV',
-    color: '#b8860b',
+    initials: 'AK',
+    color: '#c9a961',
     delay: 'delay-200'
   }
 ];
@@ -48,21 +48,38 @@ const Leadership = () => {
   const [ref, isVisible] = useScrollReveal();
 
   return (
-    <section className="section section-bg-light" id="leadership">
+    <section className="section" id="leadership" style={{ backgroundColor: 'var(--color-canvas)', padding: '8rem 0' }}>
       <div className="container" ref={ref}>
-        <div className="text-center" style={{ marginBottom: '4rem' }}>
-          <h2 className={`animate-on-scroll ${isVisible ? 'is-visible' : ''}`} style={{ fontSize: '2.5rem' }}>
-            Meet Our Visionaries
-          </h2>
-          <div
-            className={`animate-on-scroll delay-100 ${isVisible ? 'is-visible' : ''}`}
+        <div style={{ marginBottom: '5rem', maxWidth: '800px' }}>
+          <div 
+            className={`animate-on-scroll ${isVisible ? 'is-visible' : ''}`}
             style={{
-              width: '80px',
-              height: '4px',
-              backgroundColor: 'var(--color-accent)',
-              margin: '0 auto'
+              fontFamily: 'var(--font-body)',
+              fontSize: '0.7rem',
+              fontWeight: '300',
+              textTransform: 'uppercase',
+              letterSpacing: '0.15em',
+              color: 'var(--color-accent)',
+              marginBottom: '1.5rem'
             }}
-          />
+          >
+            — Leadership
+          </div>
+          <h2 
+            className={`animate-on-scroll ${isVisible ? 'is-visible' : ''}`} 
+            style={{ 
+              fontFamily: 'var(--font-heading)',
+              fontSize: 'clamp(2.5rem, 4vw, 3.75rem)',
+              fontWeight: '300',
+              lineHeight: '1.1',
+              color: 'var(--color-ink)'
+            }}
+          >
+            Built on Integrity.{' '}
+            <span style={{ display: 'block', fontStyle: 'italic', color: 'var(--color-accent)' }}>
+              Led with Vision.
+            </span>
+          </h2>
         </div>
 
         <div style={{
@@ -77,16 +94,19 @@ const Leadership = () => {
               key={index}
               className={`animate-on-scroll ${leader.delay} ${isVisible ? 'is-visible' : ''}`}
               style={{
-                backgroundColor: 'var(--color-white)',
-                padding: '2.5rem',
-                borderRadius: 'var(--border-radius)',
-                boxShadow: 'var(--shadow-lg)',
+                backgroundColor: 'var(--color-surface)',
+                padding: '3.5rem 2.5rem',
+                borderRadius: '0',
+                border: '1px solid var(--color-border)',
                 position: 'relative',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                textAlign: 'center'
+                textAlign: 'center',
+                transition: 'border-color 0.3s ease'
               }}
+              onMouseEnter={(e) => e.currentTarget.style.borderColor = 'var(--color-accent)'}
+              onMouseLeave={(e) => e.currentTarget.style.borderColor = 'var(--color-border)'}
             >
               <Quote
                 size={48}
@@ -101,12 +121,35 @@ const Leadership = () => {
 
               <AvatarIcon initials={leader.initials} color={leader.color} />
 
-              <h3 style={{ marginBottom: '0.25rem', fontSize: '1.5rem' }}>{leader.name}</h3>
-              <p style={{ color: 'var(--color-accent)', fontWeight: '600', marginBottom: '1.5rem' }}>
+              <h3 style={{ 
+                marginBottom: '0.5rem', 
+                fontSize: '1.5rem',
+                fontFamily: 'var(--font-heading)',
+                fontWeight: '400',
+                color: 'var(--color-ink)'
+              }}>
+                {leader.name}
+              </h3>
+              <p style={{ 
+                color: 'var(--color-accent)', 
+                fontFamily: 'var(--font-body)',
+                fontWeight: '500',
+                fontSize: '0.75rem',
+                textTransform: 'uppercase',
+                letterSpacing: '0.1em',
+                marginBottom: '2rem' 
+              }}>
                 {leader.role}
               </p>
 
-              <p style={{ fontStyle: 'italic', color: 'var(--color-text-light)', lineHeight: 1.8 }}>
+              <p style={{ 
+                fontStyle: 'italic', 
+                fontFamily: 'var(--font-heading)',
+                fontWeight: '300',
+                color: 'var(--color-ink-muted)', 
+                lineHeight: 1.8,
+                fontSize: '1rem'
+              }}>
                 "{leader.quote}"
               </p>
             </div>
