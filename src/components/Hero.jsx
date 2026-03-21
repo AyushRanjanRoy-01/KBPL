@@ -11,7 +11,7 @@ const Hero = () => {
 
   return (
     <section 
-      className="hero section"
+      className="hero section page-load"
       style={{
         minHeight: '90vh',
         display: 'flex',
@@ -108,8 +108,24 @@ const Hero = () => {
             From foundation to completion — Karnawati Builders delivers precision engineering and architectural excellence across 600+ government infrastructure projects.
           </p>
           
-          <div className={`animate-on-scroll delay-400 ${isVisible ? 'is-visible' : ''}`} style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-            <a href="#projects" className="btn btn-primary" style={{ display: 'inline-flex', gap: '0.5rem', alignItems: 'center' }}>
+          <div className={`animate-on-scroll delay-400 ${isVisible ? 'is-visible' : ''}`} style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+            <a href="#projects" className="btn btn-primary" style={{ 
+              display: 'inline-flex', 
+              gap: '0.5rem', 
+              alignItems: 'center',
+              transform: 'translateY(0)',
+              boxShadow: '0 2px 4px rgba(181, 145, 90, 0.2)',
+              transition: 'all 0.4s cubic-bezier(0.22, 1, 0.36, 1)'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-2px)';
+              e.currentTarget.style.boxShadow = '0 4px 8px rgba(181, 145, 90, 0.3)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 2px 4px rgba(181, 145, 90, 0.2)';
+            }}
+            >
               View Our Work
             </a>
             <a href="#about" style={{ 
@@ -122,12 +138,22 @@ const Hero = () => {
               alignItems: 'center',
               gap: '0.5rem',
               borderBottom: '1px solid transparent',
-              transition: 'border-color 0.3s ease'
+              transition: 'all 0.4s cubic-bezier(0.22, 1, 0.36, 1)',
+              transform: 'translateY(0)',
+              position: 'relative'
             }}
-            onMouseEnter={(e) => e.currentTarget.style.borderBottomColor = 'var(--color-accent)'}
-            onMouseLeave={(e) => e.currentTarget.style.borderBottomColor = 'transparent'}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderBottomColor = 'var(--color-accent)';
+              e.currentTarget.style.transform = 'translateY(-1px)';
+              e.currentTarget.style.color = 'var(--color-accent)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderBottomColor = 'transparent';
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.color = 'var(--color-ink)';
+            }}
             >
-              Our Story <ArrowRight size={16} />
+              Our Story <ArrowRight size={16} style={{ transition: 'transform 0.4s ease' }} />
             </a>
           </div>
         </div>

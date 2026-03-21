@@ -52,6 +52,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Smooth scroll behavior for all elements */
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-body);
   color: var(--color-ink);
@@ -143,7 +148,7 @@ img {
   color: var(--color-accent);
 }
 
-/* Buttons - Mature Minimalism */
+/* Buttons - Mature Minimalism with Smooth Transitions */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -154,20 +159,31 @@ img {
   font-size: 0.8rem;
   border-radius: 0;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  transform: translateY(0);
+  position: relative;
+  overflow: hidden;
 }
 
 .btn-primary {
   background-color: var(--color-accent);
   color: var(--color-white);
   border: none;
+  box-shadow: 0 2px 4px rgba(181, 145, 90, 0.2);
 }
 
 .btn-primary:hover {
   background-color: var(--color-accent-dark);
   color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(181, 145, 90, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(181, 145, 90, 0.2);
 }
 
 .btn-outline {
@@ -180,13 +196,19 @@ img {
   background-color: var(--color-ink);
   color: var(--color-white);
   border-color: var(--color-ink);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(26, 25, 22, 0.2);
 }
 
-/* Animations */
+.btn-outline:active {
+  transform: translateY(-1px);
+}
+
+/* Elegant Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(60px);
   }
   to {
     opacity: 1;
@@ -194,10 +216,19 @@ img {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .animate-on-scroll {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transform: translateY(40px);
+  transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .animate-on-scroll.is-visible {
@@ -205,12 +236,28 @@ img {
   transform: translateY(0);
 }
 
+.animate-on-scroll.delay-200 {
+  transition-delay: 0.2s;
+}
+
+.animate-on-scroll.delay-400 {
+  transition-delay: 0.4s;
+}
+
+.animate-on-scroll.delay-600 {
+  transition-delay: 0.6s;
+}
+
+/* Smooth page load animation */
+.page-load {
+  animation: fadeIn 1.2s ease-out;
+}
+
 /* Utility to add delays for staggered animations */
 .delay-100 { transition-delay: 100ms; }
 .delay-200 { transition-delay: 200ms; }
 .delay-300 { transition-delay: 300ms; }
 .delay-400 { transition-delay: 400ms; }
-
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }

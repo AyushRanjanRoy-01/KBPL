@@ -58,13 +58,29 @@ const Navbar = () => {
               letterSpacing: '0.1em',
               color: 'var(--color-ink)',
               textDecoration: 'none',
-              transition: 'color 0.3s ease',
-              position: 'relative'
+              transition: 'all 0.4s cubic-bezier(0.22, 1, 0.36, 1)',
+              position: 'relative',
+              paddingBottom: '2px'
             }}
-            onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-accent)'}
-            onMouseLeave={(e) => e.currentTarget.style.color = 'var(--color-ink)'}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.color = 'var(--color-accent)';
+              e.currentTarget.style.transform = 'translateY(-1px)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = 'var(--color-ink)';
+              e.currentTarget.style.transform = 'translateY(0)';
+            }}
           >
             About
+            <span style={{
+              position: 'absolute',
+              bottom: '0',
+              left: '0',
+              width: '0',
+              height: '1px',
+              backgroundColor: 'var(--color-accent)',
+              transition: 'width 0.4s cubic-bezier(0.22, 1, 0.36, 1)'
+            }} />
           </a>
           <a 
             href="#projects"
@@ -76,12 +92,29 @@ const Navbar = () => {
               letterSpacing: '0.1em',
               color: 'var(--color-ink)',
               textDecoration: 'none',
-              transition: 'color 0.3s ease'
+              transition: 'all 0.4s cubic-bezier(0.22, 1, 0.36, 1)',
+              position: 'relative',
+              paddingBottom: '2px'
             }}
-            onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-accent)'}
-            onMouseLeave={(e) => e.currentTarget.style.color = 'var(--color-ink)'}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.color = 'var(--color-accent)';
+              e.currentTarget.style.transform = 'translateY(-1px)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = 'var(--color-ink)';
+              e.currentTarget.style.transform = 'translateY(0)';
+            }}
           >
             Projects
+            <span style={{
+              position: 'absolute',
+              bottom: '0',
+              left: '0',
+              width: '0',
+              height: '1px',
+              backgroundColor: 'var(--color-accent)',
+              transition: 'width 0.4s cubic-bezier(0.22, 1, 0.36, 1)'
+            }} />
           </a>
           <a 
             href="#leadership"
@@ -93,12 +126,29 @@ const Navbar = () => {
               letterSpacing: '0.1em',
               color: 'var(--color-ink)',
               textDecoration: 'none',
-              transition: 'color 0.3s ease'
+              transition: 'all 0.4s cubic-bezier(0.22, 1, 0.36, 1)',
+              position: 'relative',
+              paddingBottom: '2px'
             }}
-            onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-accent)'}
-            onMouseLeave={(e) => e.currentTarget.style.color = 'var(--color-ink)'}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.color = 'var(--color-accent)';
+              e.currentTarget.style.transform = 'translateY(-1px)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = 'var(--color-ink)';
+              e.currentTarget.style.transform = 'translateY(0)';
+            }}
           >
             Leadership
+            <span style={{
+              position: 'absolute',
+              bottom: '0',
+              left: '0',
+              width: '0',
+              height: '1px',
+              backgroundColor: 'var(--color-accent)',
+              transition: 'width 0.4s cubic-bezier(0.22, 1, 0.36, 1)'
+            }} />
           </a>
           <a 
             href="#contact"
@@ -110,13 +160,23 @@ const Navbar = () => {
               letterSpacing: '0.08em',
               color: 'var(--color-white)',
               backgroundColor: 'var(--color-accent)',
-              padding: '0.625rem 1.5rem',
+              padding: '0.75rem 1.75rem',
               textDecoration: 'none',
-              transition: 'background-color 0.3s ease',
-              borderRadius: '0'
+              transition: 'all 0.4s cubic-bezier(0.22, 1, 0.36, 1)',
+              borderRadius: '0',
+              transform: 'translateY(0)',
+              boxShadow: '0 2px 4px rgba(181, 145, 90, 0.2)'
             }}
-            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--color-accent-dark)'}
-            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--color-accent)'}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = 'var(--color-accent-dark)';
+              e.currentTarget.style.transform = 'translateY(-2px)';
+              e.currentTarget.style.boxShadow = '0 4px 8px rgba(181, 145, 90, 0.3)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = 'var(--color-accent)';
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 2px 4px rgba(181, 145, 90, 0.2)';
+            }}
           >
             Contact
           </a>
