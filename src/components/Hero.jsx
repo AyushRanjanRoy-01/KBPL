@@ -23,9 +23,25 @@ const Hero = () => {
     >
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div style={{ maxWidth: '1000px' }}>
+          {/* Company Name - Subtle */}
+          <div 
+            className={`animate-on-scroll ${isVisible ? 'is-visible' : ''}`}
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: '0.875rem',
+              fontWeight: '500',
+              color: 'var(--color-ink-muted)',
+              marginBottom: '1rem',
+              letterSpacing: '0.05em',
+              opacity: 0.7
+            }}
+          >
+            Karnawati Builders Pvt Ltd
+          </div>
+
           {/* Main Heading - Apple Style */}
           <h1 
-            className={`animate-on-scroll ${isVisible ? 'is-visible' : ''}`} 
+            className={`animate-on-scroll delay-200 ${isVisible ? 'is-visible' : ''}`} 
             style={{ 
               fontFamily: 'var(--font-body)',
               fontSize: 'clamp(2.5rem, 6vw, 4rem)',
@@ -48,7 +64,7 @@ const Hero = () => {
 
           {/* Subtitle */}
           <p 
-            className={`animate-on-scroll delay-200 ${isVisible ? 'is-visible' : ''}`}
+            className={`animate-on-scroll delay-400 ${isVisible ? 'is-visible' : ''}`}
             style={{ 
               fontSize: '1.25rem',
               fontFamily: 'var(--font-body)',
@@ -59,10 +75,10 @@ const Hero = () => {
               lineHeight: '1.5'
             }}
           >
-            Karnawati Builders delivers precision engineering across 600+ government infrastructure projects since 1982.
+            Delivering precision engineering across 600+ government infrastructure projects since 1982.
           </p>
           
-          <div className={`animate-on-scroll delay-400 ${isVisible ? 'is-visible' : ''}`} style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap' }}>
+          <div className={`animate-on-scroll delay-600 ${isVisible ? 'is-visible' : ''}`} style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap' }}>
             <a href="#projects" style={{ 
               display: 'inline-flex', 
               alignItems: 'center',
