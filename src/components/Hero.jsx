@@ -23,44 +23,48 @@ const Hero = () => {
     >
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div style={{ maxWidth: '1000px' }}>
-          {/* Company Name - Subtle */}
-          <div 
+          {/* Company Name - Prominent */}
+          <h1 
             className={`animate-on-scroll ${isVisible ? 'is-visible' : ''}`}
             style={{
               fontFamily: 'var(--font-body)',
-              fontSize: '0.875rem',
-              fontWeight: '500',
-              color: 'var(--color-ink-muted)',
+              fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+              fontWeight: '700',
+              color: 'var(--color-ink)',
               marginBottom: '1rem',
-              letterSpacing: '0.05em',
-              opacity: 0.7
+              letterSpacing: '-0.02em',
+              lineHeight: '1.1'
             }}
           >
-            Karnawati Builders Pvt Ltd
-          </div>
+            Karnawati Builders
+            <br />
+            <span style={{ 
+              fontWeight: '400',
+              color: 'var(--color-ink-muted)',
+              fontSize: '0.6em',
+              letterSpacing: '0.1em'
+            }}>
+              PRIVATE LIMITED
+            </span>
+          </h1>
 
-          {/* Main Heading - Apple Style */}
-          <h1 
+          {/* Main Tagline - Apple Style */}
+          <h2 
             className={`animate-on-scroll delay-200 ${isVisible ? 'is-visible' : ''}`} 
             style={{ 
               fontFamily: 'var(--font-body)',
-              fontSize: 'clamp(2.5rem, 6vw, 4rem)',
-              fontWeight: '700',
-              lineHeight: '1.1',
+              fontSize: 'clamp(1.75rem, 4vw, 2.5rem)',
+              fontWeight: '300',
+              lineHeight: '1.2',
               marginBottom: '1.5rem',
-              color: 'var(--color-ink)',
-              letterSpacing: '-0.025em'
+              color: 'var(--color-ink-muted)',
+              letterSpacing: '-0.015em'
             }}
           >
             Building the future.
             <br />
-            <span style={{ 
-              fontWeight: '400',
-              color: 'var(--color-ink-muted)'
-            }}>
-              One project at a time.
-            </span>
-          </h1>
+            One project at a time.
+          </h2>
 
           {/* Subtitle */}
           <p 
