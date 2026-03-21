@@ -15,16 +15,10 @@ const Navbar = () => {
   return (
     <nav 
       style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 1000,
-        backgroundColor: scrolled ? 'rgba(248, 246, 242, 0.95)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(12px)' : 'none',
-        borderBottom: scrolled ? '1px solid var(--color-border)' : '1px solid transparent',
-        transition: 'all 0.3s ease',
-        padding: '1.25rem 0'
+        position: 'relative',
+        backgroundColor: 'var(--color-canvas)',
+        borderBottom: '1px solid var(--color-border)',
+        padding: '1.5rem 0'
       }}
     >
       <div className="container" style={{
@@ -35,28 +29,16 @@ const Navbar = () => {
         {/* Logo */}
         <div style={{
           display: 'flex',
-          alignItems: 'center',
-          gap: '0.5rem'
+          alignItems: 'center'
         }}>
           <span style={{
-            fontFamily: 'var(--font-body)',
-            fontSize: '1rem',
-            fontWeight: '600',
-            letterSpacing: '0.2em',
-            color: 'var(--color-ink)',
-            textTransform: 'uppercase'
-          }}>
-            KARNAWATI
-          </span>
-          <span style={{
             fontFamily: 'var(--font-heading)',
-            fontSize: '0.875rem',
-            fontWeight: '300',
-            fontStyle: 'italic',
-            color: 'var(--color-accent)',
-            letterSpacing: '0.05em'
+            fontSize: '1.75rem',
+            fontWeight: '400',
+            letterSpacing: '0.15em',
+            color: 'var(--color-ink)'
           }}>
-            Builders
+            KBPL
           </span>
         </div>
 

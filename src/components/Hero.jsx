@@ -13,13 +13,12 @@ const Hero = () => {
     <section 
       className="hero section"
       style={{
-        minHeight: '100vh',
+        minHeight: '90vh',
         display: 'flex',
         alignItems: 'center',
         position: 'relative',
         backgroundColor: 'var(--color-canvas)',
-        paddingTop: '80px',
-        paddingBottom: '80px',
+        padding: '6rem 0',
       }}
     >
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
