@@ -288,11 +288,13 @@ img {
 
   /* Hero Mobile */
   .hero {
-    padding-top: 2rem !important;
+    padding: 1rem !important;
   }
 
-  .hero .container {
-    padding: 0 1.5rem;
+  .hero .container > div {
+    padding: 2rem 1.5rem !important;
+    margin: 0 !important;
+    border-radius: 16px !important;
   }
 
   .hero h1 {

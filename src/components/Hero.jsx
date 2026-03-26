@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { ArrowRight } from 'lucide-react';
-import heroBg from '../assets/hero-bg.png';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -16,127 +14,87 @@ const Hero = () => {
         minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
+        justifyContent: 'center',
         backgroundColor: 'var(--color-canvas)',
         position: 'relative',
-        overflow: 'hidden'
+        overflow: 'hidden',
       }}
     >
-      <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-        <div style={{ maxWidth: '1000px' }}>
-          {/* Company Name - Prominent */}
-          <h1 
-            className={`animate-on-scroll ${isVisible ? 'is-visible' : ''}`}
-            style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: 'clamp(2rem, 5vw, 3.5rem)',
-              fontWeight: '700',
-              color: 'var(--color-ink)',
-              marginBottom: '1rem',
-              letterSpacing: '-0.02em',
-              lineHeight: '1.1'
-            }}
-          >
-            Karnawati Builders
-            <br />
-            <span style={{ 
-              fontWeight: '400',
-              color: 'var(--color-ink-muted)',
-              fontSize: '0.6em',
-              letterSpacing: '0.1em'
-            }}>
-              PRIVATE LIMITED
-            </span>
-          </h1>
+      {/* Subtle Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          transform: 'translate(-50%, -50%)',
+          zIndex: 0,
+          opacity: 0.4,
+          filter: 'grayscale(30%)' // further softens the video giving focus to text
+        }}
+      >
+        <source src="/hero-video.mp4" type="video/mp4" />
+      </video>
 
-          {/* Main Tagline - Apple Style */}
-          <h2 
-            className={`animate-on-scroll delay-200 ${isVisible ? 'is-visible' : ''}`} 
-            style={{ 
-              fontFamily: 'var(--font-body)',
-              fontSize: 'clamp(1.75rem, 4vw, 2.5rem)',
-              fontWeight: '300',
-              lineHeight: '1.2',
-              marginBottom: '1.5rem',
-              color: 'var(--color-ink-muted)',
-              letterSpacing: '-0.015em'
-            }}
-          >
-            Building the future.
-            <br />
-            One project at a time.
-          </h2>
+      {/* Subtle Dark Overlay for contrast (since video is a filler) */}
+      <div 
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'rgba(0,0,0,0.6)',
+          zIndex: 1
+        }}
+      ></div>
 
-          {/* Subtitle */}
-          <p 
-            className={`animate-on-scroll delay-400 ${isVisible ? 'is-visible' : ''}`}
-            style={{ 
-              fontSize: '1.25rem',
-              fontFamily: 'var(--font-body)',
-              fontWeight: '400',
-              color: 'var(--color-ink-muted)', 
-              marginBottom: '2.5rem',
-              maxWidth: '600px',
-              lineHeight: '1.5'
-            }}
-          >
-            Delivering precision engineering across 600+ government infrastructure projects since 1982.
-          </p>
-          
-          <div className={`animate-on-scroll delay-600 ${isVisible ? 'is-visible' : ''}`} style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap' }}>
-            <a href="#projects" style={{ 
-              display: 'inline-flex', 
-              alignItems: 'center',
-              padding: '0.875rem 2rem',
-              backgroundColor: 'var(--color-ink)',
-              color: 'var(--color-white)',
-              textDecoration: 'none',
-              borderRadius: '25px',
-              fontSize: '1rem',
-              fontWeight: '500',
-              fontFamily: 'var(--font-body)',
-              transition: 'all 0.2s ease',
-              transform: 'scale(1)'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'scale(1.02)';
-              e.currentTarget.style.backgroundColor = 'rgba(26, 25, 22, 0.9)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'scale(1)';
-              e.currentTarget.style.backgroundColor = 'var(--color-ink)';
-            }}
-            >
-              View Our Work
-            </a>
-            <a href="#about" style={{ 
-              display: 'inline-flex', 
-              alignItems: 'center',
-              padding: '0.875rem 2rem',
-              backgroundColor: 'transparent',
-              color: 'var(--color-ink)',
-              textDecoration: 'none',
-              borderRadius: '25px',
-              fontSize: '1rem',
-              fontWeight: '500',
-              fontFamily: 'var(--font-body)',
-              border: '2px solid var(--color-ink)',
-              transition: 'all 0.2s ease',
-              transform: 'scale(1)'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'scale(1.02)';
-              e.currentTarget.style.backgroundColor = 'var(--color-ink)';
-              e.currentTarget.style.color = 'var(--color-white)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'scale(1)';
-              e.currentTarget.style.backgroundColor = 'transparent';
-              e.currentTarget.style.color = 'var(--color-ink)';
-            }}
-            >
-              Learn More
-            </a>
-          </div>
+      <div 
+        className="container" 
+        style={{ 
+          position: 'relative', 
+          zIndex: 2, 
+          width: '100%',
+          textAlign: 'center'
+        }}
+      >
+        {/* Company Name Only - Elegant and Focused */}
+        <h1 
+          className={`animate-on-scroll ${isVisible ? 'is-visible' : ''}`}
+          style={{
+            fontFamily: 'var(--font-body)',
+            fontSize: 'clamp(2.5rem, 8vw, 6rem)',
+            fontWeight: '600',
+            color: 'white',
+            marginBottom: '0',
+            letterSpacing: '0.02em',
+            lineHeight: '1.2',
+            textShadow: '0 4px 24px rgba(0,0,0,0.3)'
+          }}
+        >
+          Karnawati Builders
+        </h1>
+        
+        <div 
+          className={`animate-on-scroll delay-200 ${isVisible ? 'is-visible' : ''}`}
+          style={{ 
+            fontFamily: 'var(--font-body)',
+            fontWeight: '300',
+            color: 'rgba(255, 255, 255, 0.8)',
+            fontSize: 'clamp(1rem, 2vw, 1.5rem)',
+            letterSpacing: '0.3em',
+            textTransform: 'uppercase',
+            marginTop: '0.5rem',
+            textShadow: '0 2px 12px rgba(0,0,0,0.3)'
+          }}
+        >
+          Private Limited
         </div>
       </div>
     </section>

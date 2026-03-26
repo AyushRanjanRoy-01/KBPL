@@ -77,26 +77,6 @@ const Navbar = () => {
           >
             About
           </a>
-          <a 
-            href="#projects"
-            style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: scrolled ? '0.875rem' : '0.9rem',
-              fontWeight: '400',
-              color: 'var(--color-ink)',
-              textDecoration: 'none',
-              transition: 'all 0.2s ease',
-              opacity: 0.8
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.opacity = '1';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.opacity = '0.8';
-            }}
-          >
-            Projects
-          </a>
           <a
             href="#leadership"
             style={{
@@ -116,6 +96,26 @@ const Navbar = () => {
             }}
           >
             Leadership
+          </a>
+          <a 
+            href="#projects"
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: scrolled ? '0.875rem' : '0.9rem',
+              fontWeight: '400',
+              color: 'var(--color-ink)',
+              textDecoration: 'none',
+              transition: 'all 0.2s ease',
+              opacity: 0.8
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.opacity = '1';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.opacity = '0.8';
+            }}
+          >
+            Projects
           </a>
           <a 
             href="#contact"
